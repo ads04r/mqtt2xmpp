@@ -1,0 +1,15 @@
+[Unit]
+Description=mqtt2xmpp service
+After=network.service
+
+[Service]
+Environment="LC_ALL=en_US.UTF-8"
+ExecStartPre=/bin/sleep 60
+ExecStart=/home/pi/tools/mqtt2xmpp/env/bin/python /home/pi/tools/mqtt2xmpp/mqtt2xmpp.py
+WorkingDirectory=/home/pi/tools/mqtt2xmpp
+User=pi
+Restart=always
+KillSignal=SIGINT 
+
+[Install]
+WantedBy=multi-user.target
