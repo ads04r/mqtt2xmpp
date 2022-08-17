@@ -1,0 +1,21 @@
+{
+	"mqtt": {
+		"host": "",
+		"topic": "status/#",
+		"port": 1883,
+		"timeout": 60
+	},
+	"xmpp": {
+		"host": "",
+		"username": "",
+		"password": "",
+		"resource": "Bot",
+		"timeout": 60,
+		"muc": {
+			"room": "",
+			"server": "",
+			"handle": "",
+			"password": ""
+		}
+	}
+}

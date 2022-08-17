@@ -1,0 +1,3 @@
+paho-mqtt==1.6.1
+six==1.16.0
+xmpppy==0.7.1
