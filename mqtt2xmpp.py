@@ -56,7 +56,7 @@ if 'resource' in config['xmpp']:
 while True:
 
 	jid=xmpp.protocol.JID(jid_id)
-	cl=xmpp.Client(jid.getDomain(),debug=[])
+	cl=xmpp.Client(jid.getDomain(),debug=['always'])
 	cl.connect()
 	cl.auth(jid.getNode(), config['xmpp']['password'], resource=jid.getResource())
 	presence = xmpp.protocol.Presence(to=muc_id)
@@ -97,4 +97,4 @@ while True:
 		pass
 
 	print("ERROR: program      close Program terminated. Waiting to reconnect / Press Ctrl-C to cancel")
-	time.sleep(60) # Wait a minute before attempting reconnect
+	time.sleep(5) # Wait before attempting reconnect
